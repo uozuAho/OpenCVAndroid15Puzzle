@@ -15,6 +15,7 @@ applicationDefaultJvmArgs = [
 
 dependencies {
     compile project(':Shared')
+    compile project(':externals:OpenCVSwingUI')
     compile fileTree(dir: 'libs', include: 'opencv-300.jar')
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

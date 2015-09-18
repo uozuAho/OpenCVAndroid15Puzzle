@@ -7,8 +7,8 @@ import org.opencv.samples.puzzle15.Puzzle15Processor;
 
 import java.awt.Graphics2D;
 
-import aho.uozu.opencv.ui.CameraViewer;
-import aho.uozu.opencv.ui.FrameProcessor;
+import aho.uozu.opencv.swingui.CameraViewer;
+import aho.uozu.opencv.swingui.FrameProcessor;
 
 public class Puzzle15Webcam {
 
