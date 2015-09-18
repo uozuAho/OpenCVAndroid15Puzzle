@@ -1,0 +1,20 @@
+group 'aho.uozu'
+version '0.1'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.7
+
+def openCvPath = '/home/uozu/uozu/libs/opencv-3.0.0/release'
+
+mainClassName = 'aho.uozu.Puzzle15Webcam'
+applicationDefaultJvmArgs = [
+        "-Djava.library.path=$openCvPath/lib"
+]
+
+dependencies {
+    compile project(':Shared')
+    compile fileTree(dir: 'libs', include: 'opencv-300.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

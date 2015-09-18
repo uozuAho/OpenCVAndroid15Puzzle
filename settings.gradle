@@ -1,0 +1,4 @@
+include ':OpenCVLibrary300'
+include ':Puzzle15Android'
+include ':Puzzle15Desktop'
+include ':Shared'
