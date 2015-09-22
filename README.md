@@ -10,6 +10,4 @@ Android Studio 1.3.2 used for development, however theoretically everything
 should be do-able through gradle...
 
 # TODO
-- use external opencv-300.jar instead of multiple
-  internal copies
-- add logging that works on desktop & android
+- use external opencv-300.jar instead of multiple internal copies

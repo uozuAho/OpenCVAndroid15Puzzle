@@ -12,8 +12,6 @@ import aho.uozu.opencv.swingui.FrameProcessor;
 
 public class Puzzle15Webcam {
 
-    private static final String TAG = "puz15wc";
-
     private static class Processor implements FrameProcessor {
 
         private Puzzle15Processor mPuzzle;
@@ -44,8 +42,6 @@ public class Puzzle15Webcam {
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         CameraViewer camview = new CameraViewer("15 puzzle");
-//        Log.d(TAG, String.format("camview: %dx%d", camview.getFrameWidth(),
-//                camview.getFrameHeight()));
         Processor puzzleProcessor = new Processor();
         puzzleProcessor.setSize(camview.getFrameWidth(), camview.getFrameHeight());
         camview.setFrameProcessor(puzzleProcessor);

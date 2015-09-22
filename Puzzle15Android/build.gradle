@@ -22,4 +22,6 @@ android {
 dependencies {
     compile project(':OpenCVLibrary300')
     compile project(':Shared')
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'org.slf4j:slf4j-android:1.7.12'
 }

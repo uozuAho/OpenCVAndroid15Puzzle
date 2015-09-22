@@ -6,6 +6,8 @@ import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.core.Point;
 import org.opencv.imgproc.Imgproc;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -17,8 +19,9 @@ public class Puzzle15Processor {
     private static final int GRID_SIZE = 4;
     private static final int GRID_AREA = GRID_SIZE * GRID_SIZE;
     private static final int GRID_EMPTY_INDEX = GRID_AREA - 1;
-    private static final String TAG = "Puzzle15Processor";
     private static final Scalar GRID_EMPTY_COLOR = new Scalar(0x33, 0x33, 0x33, 0xFF);
+
+    private static final Logger log = LoggerFactory.getLogger(Puzzle15Processor.class);
 
     private int[]   mIndexes;
     private int[]   mTextWidths;
@@ -65,6 +68,8 @@ public class Puzzle15Processor {
             mTextHeights[i] = (int) s.height;
             mTextWidths[i] = (int) s.width;
         }
+
+        log.info("Game prepared: {}x{}", width, height);
     }
 
     /* this method to be called from the outside. it processes the frame and shuffles
